@@ -4,6 +4,7 @@ import Cookies from 'universal-cookie';
 
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
 import UnicornIcon from '../assets/unicorn.png';
+import LogoutIcon from '../assets/logout.png'
 
 const Sidebar = () => (
     <div className="channel-list__sidebar">
