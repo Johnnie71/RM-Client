@@ -4,6 +4,7 @@ import { Chat } from 'stream-chat-react';
 import Cookies from 'universal-cookie';
 
 import { ChannelListContainer, ChannelContainer} from './components';
+
 const client = StreamChat.getInstance(process.env.REACT_APP_STREAM_KEY);
 
 export default function App() {
