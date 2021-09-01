@@ -2,7 +2,7 @@ import React from 'react';
 
 import AddChannel from '../assets/addchannel';
 
-const TeamChannelList = () => {
+const TeamChannelList = ({}) => {
     return (
         <div>
             
