@@ -1,4 +1,6 @@
-import React from 'react'
+import React from 'react';
+
+import AddChannel from '../assets';
 
 const TeamChannelList = () => {
     return (
@@ -8,4 +10,4 @@ const TeamChannelList = () => {
     )
 }
 
-export default TeamChannelList
+export default TeamChannelList;
