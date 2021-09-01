@@ -33,6 +33,7 @@ const TeamChannelList = ({children, error = false, loading, type}) => {
                 <p className="team-channel-list__header__title">
                   {type === 'team' ? 'Channels' : 'Direct Messages'}
                 </p>
+                {/*Button to add channel */}
             </div>
         </div>
     )
