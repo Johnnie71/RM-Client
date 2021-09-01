@@ -26,7 +26,11 @@ const TeamChannelPreview = ({ channel, type }) => {
     };
 
     return (
-        <div>
+        <div className={
+            channel?.id === activeChannel ?.id
+            ? 'channel-preview__wrapper__selected'
+            : 'channel-preview__wrapper'
+        }>
             
         </div>
     );
