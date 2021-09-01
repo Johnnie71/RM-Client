@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useChatContext } from 'stream-chat-react';
 
-import { SearchIcon } from '../assets';
+import SearchIcon from '../assets/SearchIcon';
 
 const ChannelSearch = () => {
     const [query, setQuery] = useState('');
