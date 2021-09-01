@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, useChatContext } from 'stream-chat-react';
+import { Avatar, ChannelPreviewMessenger, useChatContext } from 'stream-chat-react';
 
 const TeamChannelPreview = ({ channel, type }) => {
     const { channel: activeChannel, client} = useChatContext();
@@ -30,8 +30,12 @@ const TeamChannelPreview = ({ channel, type }) => {
             channel?.id === activeChannel ?.id
             ? 'channel-preview__wrapper__selected'
             : 'channel-preview__wrapper'
-        }>
-            
+        }
+        onClick={() => {
+            console.log(channel);
+        }}
+        >
+            {type === 'team' ? <ChannelPreview /> : <DirectMessPreview />}
         </div>
     );
 };
