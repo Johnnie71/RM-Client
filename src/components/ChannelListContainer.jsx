@@ -21,7 +21,7 @@ const Sidebar = () => (
     </div>
 );
 
-const companyHeader = () => (
+const CompanyHeader = () => (
     <div className="channel-list__header">
         <p className="channel-list__header__text">Chats</p>
     </div>
@@ -31,6 +31,9 @@ const ChannelContainer = () => {
     return (
         <>
             <Sidebar />
+            <div className="channel-list__list__wrapper">
+                <CompanyHeader />
+            </div>
         </>
     );
 };
