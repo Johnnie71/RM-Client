@@ -25,8 +25,6 @@ const TeamChannelList = ({children, error = false, loading, type}) => {
     };
 
 
-
-
     return (
         <div className="team-channel-list">
             <div className="team-channel-list__header">
@@ -35,6 +33,7 @@ const TeamChannelList = ({children, error = false, loading, type}) => {
                 </p>
                 {/*Button to add channel */}
             </div>
+            {children}
         </div>
     )
 }
