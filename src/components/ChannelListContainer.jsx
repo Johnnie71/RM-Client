@@ -3,14 +3,14 @@ import { ChannelList, useChatContext } from 'stream-chat-react';
 import Cookies from 'universal-cookie';
 
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
-import EcoIcon from '../assets/ecoicon.png';
+import TextIcon from '../assets/texticon.png';
 import LogoutIcon from '../assets/logout.png'
 
 const Sidebar = () => (
     <div className="channel-list__sidebar">
         <div className="channel-list__sidebar__icon1">
             <div className="icon1__inner">
-                <img src={EcoIcon} alt='Unicorn' width='30' />
+                <img src={TextIcon} alt='Unicorn' width='30' />
             </div>
         </div>
         <div className="channel-list__sidebar__icon2">
