@@ -7,7 +7,13 @@ import signupImage from '../assets/signup.jpeg';
 const Auth = () => {
     const [isSignup, setIsSignup] = useState(true);
 
-    const handleChange = () => {};
+    const handleChange = () => {
+
+    };
+
+    const switchMode = () => {
+        setIsSignup((prevIsSignup) => !prevIsSignup)
+    }
 
     return (
         <div className="auth__form-container">
@@ -86,9 +92,9 @@ const Auth = () => {
                     </form>
                     <div className="auth__form-container_fields-account">
                         <p>
-                            {isSignup ? "Already have an account?" : "Dont have an account"}
+                            {isSignup ? "Already have an account?" : "Dont have an account?"}
                             <span onClick={switchMode}>
-                                {isSignup ? 'Sign in' : 'Sign up'}
+                                {isSignup ? ' Sign in' : ' Sign up'}
                             </span>
                         </p>
                     </div>
