@@ -22,6 +22,10 @@ const Auth = () => {
 
     const switchMode = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup)
+    };
+
+    const handleSubmit = () => {
+        
     }
 
     return (
@@ -29,12 +33,12 @@ const Auth = () => {
             <div className="auth__form-container_fields">
                 <div className="auth__form-container_fields-content">
                     <p>{isSignup ? 'Sign Up' : 'Sign In'}</p>
-                    <form onSubmit={() => {}} >
+                    <form onSubmit={handleSubmit} >
                         {isSignup && (
                             <div className='auth__form-container_fields-content_input'>
-                                <label htmlFor="fullname">Full Name</label>
+                                <label htmlFor="fullName">Full Name</label>
                                 <input
-                                    name='fullname'
+                                    name='fullName'
                                     type='text'
                                     placeholder='Full Name'
                                     onChange={handleChange}
@@ -54,9 +58,9 @@ const Auth = () => {
                         </div>
                         {isSignup && (
                             <div className='auth__form-container_fields-content_input'>
-                                <label htmlFor="phonenumber">Phone Number</label>
+                                <label htmlFor="phoneNumber">Phone Number</label>
                                 <input
-                                    name='phonenumber'
+                                    name='phoneNumber'
                                     type='text'
                                     placeholder='Phone number'
                                     onChange={handleChange}
