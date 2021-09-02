@@ -9,7 +9,13 @@ import { ChannelListContainer, ChannelContainer, Auth} from './components';
 
 const client = StreamChat.getInstance(process.env.REACT_APP_STREAM_KEY);
 
+const authToken = false;
+
 export default function App() {
+
+    if(!authToken) return <Auth />;
+
+
     return (
         <div className='app__wrapper'>
             <Chat client={client} theme={'team light'}>
