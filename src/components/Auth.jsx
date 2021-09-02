@@ -84,6 +84,9 @@ const Auth = () => {
                             </div>
                         )}
                     </form>
+                    <div className="auth__form-container_fields-account">
+                        <p>{isSignup ? "Already have an account?" : "Dont have an account"}</p>
+                    </div>
                 </div>
             </div>
         </div>
