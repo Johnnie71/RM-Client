@@ -17,7 +17,7 @@ const Auth = () => {
     const [form, setForm] = useState(initialState);
 
     const handleChange = (e) => {
-        setForm({...form, [e.target.name]: e.target.value})
+        setForm({...form, [e.target.name]: e.target.value});
     };
 
     const switchMode = () => {
@@ -25,7 +25,7 @@ const Auth = () => {
     };
 
     const handleSubmit = () => {
-        
+
     }
 
     return (
