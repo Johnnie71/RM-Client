@@ -24,8 +24,8 @@ const Auth = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup)
     };
 
-    const handleSubmit = () => {
-
+    const handleSubmit = (e) => {
+        e.preventDefault();
     }
 
     return (
