@@ -4,11 +4,20 @@ import axios from 'axios';
 
 import signupImage from '../assets/signup.webp';
 
+const initialState = {
+    fullName: '',
+    username: '',
+    password: '',
+    phoneNumber: '',
+    avatarURL: '',
+}
+
 const Auth = () => {
-    const [isSignup, setIsSignup] = useState(true);
+    const [isSignup, setIsSignup] = useState(false);
+    const [form, setForm] = useState(initialState);
 
-    const handleChange = () => {
-
+    const handleChange = (e) => {
+        setForm({...form, [e.target.name]: e.target.value})
     };
 
     const switchMode = () => {
