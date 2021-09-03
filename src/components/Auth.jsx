@@ -32,7 +32,7 @@ const Auth = () => {
         const URL = "http://localhost:5000/auth";
 
         // passing data from the frontend to backend
-        const { data } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
+        const { data: { token, userId, hashedPassword } } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
             username, password, fullName, phoneNumber, avatarURL
         });
     }
