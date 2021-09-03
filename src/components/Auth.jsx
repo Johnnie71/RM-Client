@@ -47,7 +47,10 @@ const Auth = () => {
         cookies.set('phoneNumber', phoneNumber);
         cookies.set('avatarURL', avatarURL);
         cookies.set('hashedPassword', hashedPassword);
-        }
+        };
+
+        // reload browser once we get the cookies
+        window.location.reload();
     }
 
     return (
