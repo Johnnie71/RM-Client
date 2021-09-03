@@ -26,6 +26,10 @@ const Auth = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+
+        const { fullName, username, password, phoneNumber, avatarURL} = form;
+
+        const URL = "http://localhost:5000/auth";
     }
 
     return (
