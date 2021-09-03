@@ -24,12 +24,17 @@ const Auth = () => {
         setIsSignup((prevIsSignup) => !prevIsSignup)
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
 
         const { fullName, username, password, phoneNumber, avatarURL} = form;
 
         const URL = "http://localhost:5000/auth";
+
+        // passing data from the frontend to backend
+        const { data } = await axios.post(`${URL}/${isSignup ? 'signup' : 'login'}`, {
+            username, password, fullName, phoneNumber, avatarURL
+        });
     }
 
     return (
