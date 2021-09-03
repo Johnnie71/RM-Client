@@ -12,6 +12,7 @@ const authToken = cookies.get("token");
 
 const client = StreamChat.getInstance(process.env.REACT_APP_STREAM_KEY);
 
+// abling to connect user and get all their messages
 if(authToken) {
     client.connectUser({
         id: cookies.get('userId'),
@@ -20,7 +21,7 @@ if(authToken) {
         image: cookies.get('avatarURL'),
         hashedPassword: cookies.get('hashedPassword'),
         phoneNumber: cookies.get('phoneNumber'),
-    });
+    }, authToken);
 };
 
 export default function App() {
