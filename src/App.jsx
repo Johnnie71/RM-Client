@@ -14,13 +14,12 @@ const client = StreamChat.getInstance(process.env.REACT_APP_STREAM_KEY);
 
 if(authToken) {
     client.connectUser({
-        token: cookies.get('token'),
-        username: cookies.get('username'),
+        id: cookies.get('userId'),
+        name: cookies.get('username'),
         fullName: cookies.get('fullName'),
-        userId: cookies.get('userId'),
+        image: cookies.get('avatarURL'),
+        hashedPassword: cookies.get('hashedPassword'),
         phoneNumber: cookies.get('phoneNumber'),
-        avatarURL: cookies.get('avatarURL'),
-        hashedPassword: cookies.get('hashedPassword')
     });
 };
 
