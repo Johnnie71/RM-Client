@@ -49,7 +49,7 @@ const Auth = () => {
         cookies.set('hashedPassword', hashedPassword);
         };
 
-        // reload browser once we get the cookies
+        // reload browser once we get the cookies to either load into messaging or signup
         window.location.reload();
     }
 
@@ -142,7 +142,7 @@ const Auth = () => {
                 </div>
             </div>
             <div className="auth__form-container_image">
-                <img src={signupImage}/>
+                <img src={signupImage} alt="background"/>
             </div>
         </div>
     )
