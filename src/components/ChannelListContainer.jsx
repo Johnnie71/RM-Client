@@ -6,7 +6,7 @@ import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
 import ChatIcon from '../assets/chaticon.png';
 import LogoutIcon from '../assets/logout.png';
 
-const cookies = new Cookies;
+const cookies = new Cookies();
 
 const Sidebar = ({ logout }) => (
     <div className="channel-list__sidebar">
