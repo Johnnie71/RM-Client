@@ -33,13 +33,13 @@ const ChannelListContainer = () => {
 
     const logout = () => {
         // removing all cookies so user can sign out
-        cookies.removes("token");
-        cookies.removes('userId');
-        cookies.removes('username');
-        cookies.removes('fullName');
-        cookies.removes('avatarURL');
-        cookies.removes('hashedPassword');
-        cookies.removes('phoneNumber');
+        cookies.remove("token");
+        cookies.remove('userId');
+        cookies.remove('username');
+        cookies.remove('fullName');
+        cookies.remove('avatarURL');
+        cookies.remove('hashedPassword');
+        cookies.remove('phoneNumber');
 
         // Reloading window which will bring to sign in/up page
         window.location.reload();
