@@ -4,7 +4,9 @@ import Cookies from 'universal-cookie';
 
 import { ChannelSearch, TeamChannelList, TeamChannelPreview } from './';
 import ChatIcon from '../assets/chaticon.png';
-import LogoutIcon from '../assets/logout.png'
+import LogoutIcon from '../assets/logout.png';
+
+const cookies = new Cookies;
 
 const Sidebar = () => (
     <div className="channel-list__sidebar">
@@ -28,6 +30,21 @@ const CompanyHeader = () => (
 )
 
 const ChannelListContainer = () => {
+
+    const logout = () => {
+        // removing all cookies so user can sign out
+        cookies.removes("token");
+        cookies.removes('userId');
+        cookies.removes('username');
+        cookies.removes('fullName');
+        cookies.removes('avatarURL');
+        cookies.removes('hashedPassword');
+        cookies.removes('phoneNumber');
+
+        // Reloading window which will bring to sign in/up page
+        window.location.reload();
+    };
+
     return (
         <>
             <Sidebar />
