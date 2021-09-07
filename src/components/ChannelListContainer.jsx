@@ -27,7 +27,7 @@ const CompanyHeader = () => (
     </div>
 )
 
-const ChannelContainer = () => {
+const ChannelListContainer = () => {
     return (
         <>
             <Sidebar />
@@ -71,4 +71,4 @@ const ChannelContainer = () => {
     );
 };
 
-export default ChannelContainer;
+export default ChannelListContainer;
