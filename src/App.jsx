@@ -24,7 +24,7 @@ if(authToken) {
     }, authToken);
 };
 
-export default function App() {
+const App = () => {
 
     if(!authToken) return <Auth />;
 
@@ -36,5 +36,7 @@ export default function App() {
                 <ChannelContainer />
             </Chat>
         </div>
-    )
-}
+    );
+};
+
+export default App;

@@ -11,15 +11,15 @@ const ChannelContainer = () => {
     if(isCreating) {
         return (
 
-        )
-    }
+        );
+    };
 
     //checking to see if the current state is in editing mode
     if(isEditing) {
         return (
             
-        )
-    }
+        );
+    };
 
     return (
         <div>
