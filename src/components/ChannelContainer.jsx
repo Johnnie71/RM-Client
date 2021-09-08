@@ -10,14 +10,18 @@ const ChannelContainer = ({ isCreating, setIsCreating, isEditing, setIsEditing, 
     //checking to see if current state is in creating mode
     if(isCreating) {
         return (
-
+            <div className="channel__container">
+                <CreateChannel createType={createType} setIsCreating={setIsCreating}/>
+            </div>
         );
     };
 
     //checking to see if the current state is in editing mode
     if(isEditing) {
         return (
-            
+            <div className="channel__container">
+                <EditChannel setIsEditing={setIsEditing} />
+            </div>
         );
     };
 
