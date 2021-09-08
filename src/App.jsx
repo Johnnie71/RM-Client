@@ -41,7 +41,13 @@ const App = () => {
                     isEditing={isEditing}
                     setIsEditing={setIsEditing}
                 />
-                <ChannelContainer />
+                <ChannelContainer
+                    isCreating={isCreating}
+                    setIsCreating={setIsCreating}
+                    isEditing={isEditing}
+                    setIsEditing={setIsEditing}
+                    createType={createType}
+                />
             </Chat>
         </div>
     );
