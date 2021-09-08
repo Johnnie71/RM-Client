@@ -3,7 +3,7 @@ import { Channel, useChatContext } from 'stream-chat-react';
 
 import { ChannelInner, CreateChannel, EditChannel, TeamMessage } from './';
 
-const ChannelContainer = () => {
+const ChannelContainer = ({ isCreating, setIsCreating, isEditing, setIsEditing, createType }) => {
     // giving us the information about the current specific channel
     const { channel } = useChatContext();
 
