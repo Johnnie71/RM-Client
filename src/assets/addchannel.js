@@ -21,3 +21,5 @@ export const AddChannel = ({ setCreateType, setIsCreating, setIsEditing, setTogg
     />
   </svg>
 );
+
+export default AddChannel;
