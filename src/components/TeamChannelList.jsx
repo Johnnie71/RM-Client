@@ -20,6 +20,9 @@ const TeamChannelList = ({children, error = false, loading, type}) => {
                 <p className="team-channel-list__message loading">
                     {type === 'team' ? 'Channels' : 'Direct Messages'} loading...
                 </p>
+                <AddChannel
+                
+                />
             </div>
         );
     };
