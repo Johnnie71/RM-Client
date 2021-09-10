@@ -26,6 +26,7 @@ const CreateChannel = ({createType, setIsCreating }) => {
         <div className="create-channel__container">
             <div className="create-chanbel__header">
                 <p>{createType === 'team' ? 'Create a new channel' : 'Send a Direct Message'}</p>
+                <CloseCreateChannel setIsCreating={setIsCreating} />
             </div>
         </div>
     );
