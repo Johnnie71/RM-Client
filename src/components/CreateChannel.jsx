@@ -24,7 +24,7 @@ const ChannelNameInput = ({ channelName = '', setChannelName }) => {
 const CreateChannel = () => {
     return (
         <div>
-            Create Channel
+            <ChannelNameInput />
         </div>
     );
 };
