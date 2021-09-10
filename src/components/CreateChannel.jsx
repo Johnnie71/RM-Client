@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useChatContext } from 'stream-chat-react';
 
 import { UserList } from './';
@@ -22,6 +22,9 @@ const ChannelNameInput = ({ channelName = '', setChannelName }) => {
 }
 
 const CreateChannel = ({createType, setIsCreating }) => {
+    const [channelName, setChannelName] = useState();
+
+
     return (
         <div className="create-channel__container">
             <div className="create-chanbel__header">
