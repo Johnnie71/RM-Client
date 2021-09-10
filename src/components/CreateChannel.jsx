@@ -15,16 +15,18 @@ const ChannelNameInput = ({ channelName = '', setChannelName }) => {
     return (
         <div className="channel-name-input__wrapper">
             <p>Name</p>
-            <input value={channelName} onChange={handleChange} placeholder='channel-name (no spaces)' />
+            <input value={channelName} onChange={handleChange} placeholder='channel-name' />
             <p>Add Members</p>
         </div>
     )
 }
 
-const CreateChannel = () => {
+const CreateChannel = ({createType, setIsCreating }) => {
     return (
-        <div>
-            <ChannelNameInput />
+        <div className="create-channel__container">
+            <div className="create-chanbel__header">
+                <p>{createType === 'team' ? 'Create a new channel' : 'Send a Direct Message'}</p>
+            </div>
         </div>
     );
 };
