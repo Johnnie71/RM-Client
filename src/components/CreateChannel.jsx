@@ -10,6 +10,7 @@ const ChannelNameInput = ({ channelName = '', setChannelName }) => {
         <div className="channel-name-input__wrapper">
             <p>Name</p>
             <input value={} onChange={} placeholder='channel-name (no spaces)' />
+            <p>Add Members</p>
         </div>
     )
 }
