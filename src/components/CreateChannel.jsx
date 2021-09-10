@@ -22,12 +22,12 @@ const ChannelNameInput = ({ channelName = '', setChannelName }) => {
 }
 
 const CreateChannel = ({createType, setIsCreating }) => {
-    const [channelName, setChannelName] = useState();
+    const [channelName, setChannelName] = useState('');
 
 
     return (
         <div className="create-channel__container">
-            <div className="create-chanbel__header">
+            <div className="create-channel__header">
                 <p>{createType === 'team' ? 'Create a new channel' : 'Send a Direct Message'}</p>
                 <CloseCreateChannel setIsCreating={setIsCreating} />
             </div>
