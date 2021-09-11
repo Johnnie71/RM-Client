@@ -29,7 +29,7 @@ const UserList = () => {
     const { client } = useChatContext();
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
-
+    const [listEmpty, setListEmpty] = useState(false);
     useEffect(() => {
         const getUsers = async () => {
             if(loading) return;
@@ -42,12 +42,20 @@ const UserList = () => {
                     { id: { $ne: client.userID }},
                     { id: 1 },
                     { limit: 8 }
-                )
+                );
+
+                if (response.users.length) {
+                    setUsers(response.users);
+                } else {
+                    setListEmpty(true);
+                }
             } catch (error){
+                console.log(error)
+            };
+                setLoading(false)
+        };
 
-            }
-
-        }
+        if(client) getUsers();
     }, [])
 
     return (
