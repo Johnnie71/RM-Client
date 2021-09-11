@@ -15,6 +15,15 @@ const ListContainer = ( { children }) => {
     );
 };
 
+const UserItem = () => {
+    return (
+        <div className='user-item__wrapper'>
+            <div className='user-item__name__wrapper'>
+
+            </div>
+        </div>
+    )
+};
 
 const UserList = () => {
 
