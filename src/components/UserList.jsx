@@ -39,7 +39,9 @@ const UserList = () => {
             try {
                 const response = await client.queryUsers(
                     // getting users without current users ID
-                    { id: { $ne: client.userID }}
+                    { id: { $ne: client.userID }},
+                    { id: 1 },
+                    { limit: 8 }
                 )
             } catch (error){
 
