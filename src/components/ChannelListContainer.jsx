@@ -90,6 +90,8 @@ const ChannelListContainer = ({ isCreating, setIsCreating, setCreateType, setIsE
                         <TeamChannelPreview 
                             {...previewProps}
                             type="messaging"
+                            setIsCreating={setIsCreating}
+                            setIsEditing={setIsEditing}
                         />
                     )}
                 />
