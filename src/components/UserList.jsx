@@ -1,5 +1,5 @@
 import React, { Children, useEffect, useState } from 'react';
-import { Avatar, useChatChannel } from 'stream-chat-react';
+import { Avatar, useChatContext } from 'stream-chat-react';
 
 import { InviteIcon } from '../assets';
 
@@ -19,13 +19,31 @@ const UserItem = () => {
     return (
         <div className='user-item__wrapper'>
             <div className='user-item__name__wrapper'>
-
+                <Avatar  />
             </div>
         </div>
     )
 };
 
 const UserList = () => {
+    const { client } = useChatContext();
+    const [users, setUsers] = useState([]);
+    const [loading, setLoading] = useState(false);
+
+    useEffect(() => {
+        const getUsers = async () => {
+            if(loading) return;
+
+            setLoading(true);
+
+            try {
+
+            } catch (error){
+
+            }
+
+        }
+    }, [filters])
 
     return (
         <ListContainer>
