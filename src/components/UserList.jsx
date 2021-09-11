@@ -19,9 +19,9 @@ const ListContainer = ( { children }) => {
 const UserList = () => {
 
     return (
-        <div>
+        <ListContainer>
             User List
-        </div>
+        </ListContainer>
     );
 };
 
