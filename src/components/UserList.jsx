@@ -37,7 +37,9 @@ const UserList = () => {
             setLoading(true);
 
             try {
-
+                const response = await client.queryUsers(
+                    { id: { $ne: client.userID }}
+                )
             } catch (error){
 
             }
