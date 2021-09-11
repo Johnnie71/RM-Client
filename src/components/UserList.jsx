@@ -46,7 +46,7 @@ const UserList = () => {
             }
 
         }
-    }, [filters])
+    }, [])
 
     return (
         <ListContainer>
