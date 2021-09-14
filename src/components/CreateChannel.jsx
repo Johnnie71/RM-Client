@@ -46,7 +46,7 @@ const CreateChannel = ({createType, setIsCreating }) => {
             // active channel to be displayed once it is made
             setActiveChannel(newChannel);
         } catch (error){
-
+            console.log(error);
         }
     };
 
