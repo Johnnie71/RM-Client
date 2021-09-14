@@ -28,6 +28,27 @@ const CreateChannel = ({createType, setIsCreating }) => {
     const [selectedUsers, setSelectedUsers] = useState([client.userID || '']);
     const [channelName, setChannelName] = useState('');
 
+    const createChannel = async (e) => {
+        e.preventDefault();
+
+        try {
+            const newChannel = await client.channel(createType, channelName, {
+                name: channelName, members: selectedUsers
+            });
+            // seeing when there is a new message in that channel
+            await newChannel.watch();
+
+            // resetting channel name to empty once it is made
+            setChannelName('');
+            // once created created type is false
+            setIsCreating(false);
+            setSelectedUsers([client.userID]);
+            // active channel to be displayed once it is made
+            setActiveChannel(newChannel);
+        } catch (error){
+
+        }
+    };
 
     return (
         <div className="create-channel__container">
@@ -37,6 +58,9 @@ const CreateChannel = ({createType, setIsCreating }) => {
             </div>
             {createType === 'team' && <ChannelNameInput channelName={channelName} setChannelName={setChannelName} />}
             <UserList setSelectedUsers={setSelectedUsers} />
+            <div className='create-channel__button-wrapper' onClick={createChannel}>
+                <p>{createType === 'team' ? 'Create Channel' : 'Create Message Group'}</p>
+            </div>
         </div>
     );
 };
