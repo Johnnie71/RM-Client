@@ -1,5 +1,6 @@
 import React, { Children, useEffect, useState } from 'react';
 import { Avatar, useChatContext } from 'stream-chat-react';
+import { initialState } from 'stream-chat-react/dist/components/Channel/channelState';
 
 import { InviteIcon } from '../assets';
 
@@ -22,7 +23,7 @@ const UserItem = ({ user, setSelectedUsers }) => {
         if(selected){
             setSelectedUsers((prevUsers) => prevUsers.filter((prevUser) => prevUser !== user.id));
         } else {
-            setSelectedUsers(prevUsers => [...prevUsers, user.id])
+            setSelectedUsers(prevUsers => [...prevUsers, user.id]);
         }
         setSelected((prevSelected) => !prevSelected);
     };
@@ -44,6 +45,7 @@ const UserList = ({ setSelectedUsers }) => {
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
     const [listEmpty, setListEmpty] = useState(false);
+    const [error, setError] = useState(false);
     useEffect(() => {
         const getUsers = async () => {
             if(loading) return;
@@ -61,7 +63,7 @@ const UserList = ({ setSelectedUsers }) => {
                 if (response.users.length) {
                     setUsers(response.users);
                 } else {
-                    setListEmpty(true);
+                    setError(true);
                 }
 
             } catch (error) {
@@ -72,6 +74,14 @@ const UserList = ({ setSelectedUsers }) => {
 
         if(client) getUsers();
     }, [])
+
+    if(error){
+        return (
+            <div className="user-list__message">
+                Error loading, please refresh and try again.
+            </div>
+        );
+    };
 
     return (
         <ListContainer>
