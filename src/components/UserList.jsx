@@ -74,7 +74,7 @@ const UserList = () => {
                     Loading users...
                 </div> : (
                     users?.map((user, i) => (
-                        <UserItem index={i} key={user.id} user={user} />
+                        <UserItem index={i} key={user.id} user={user} setSelectedUsers={setSelectedUsers} />
                     ))
                 )
             }
