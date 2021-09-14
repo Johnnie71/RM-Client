@@ -15,7 +15,7 @@ const ListContainer = ( { children }) => {
     );
 };
 
-const UserItem = ({user}) => {
+const UserItem = ({ user, setSelectedUsers }) => {
     const [selected, setSelected] = useState(false);
 
     const handleSelect = () => {
