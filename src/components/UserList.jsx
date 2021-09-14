@@ -85,6 +85,16 @@ const UserList = ({ setSelectedUsers }) => {
         );
     };
 
+    if(listEmpty){
+        return (
+            <ListContainer>
+                <div className="user-list__message">
+                    No users found.
+                </div>
+            </ListContainer>
+        );
+    };
+
     return (
         <ListContainer>
             {loading ? <div className="user-list__message">
