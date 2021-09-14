@@ -34,7 +34,7 @@ const UserItem = ({user}) => {
     )
 };
 
-const UserList = () => {
+const UserList = ({ setSelectedUsers }) => {
     const { client } = useChatContext();
     const [users, setUsers] = useState([]);
     const [loading, setLoading] = useState(false);
