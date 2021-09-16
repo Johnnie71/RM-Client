@@ -27,7 +27,15 @@ const CompanyHeader = () => (
     <div className="channel-list__header">
         <p className="channel-list__header__text">Chats</p>
     </div>
-)
+);
+
+const customChannelTeamFilter = (channels) => {
+    return channels.filter((channel) => channel .type === 'team');
+};
+
+const customChannelMessagingFilter = (channels) => {
+    return channels.filter((channel) => channel .type === 'messaging');
+};
 
 const ChannelListContainer = ({ isCreating, setIsCreating, setCreateType, setIsEditing }) => {
 
