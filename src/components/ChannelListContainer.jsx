@@ -126,7 +126,12 @@ const ChannelListContainer = ({ setCreateType, setIsCreating, setIsEditing }) =>
             >
                 <div className="channel-list__container-toggle" onClick={() => setToggleContainer((prevTogglerContainer) => !prevTogglerContainer)}>
                 </div>
-                
+                <ChannelListContent
+                    setIsCreating={setIsCreating}
+                    setCreateType={setCreateType}
+                    setIsEditing={setIsEditing}
+                    setToggleContainer={setToggleContainer}
+                />
             </div>
         </>
     )
