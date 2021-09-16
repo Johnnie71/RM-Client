@@ -45,6 +45,7 @@ const CreateChannel = ({createType, setIsCreating }) => {
             setSelectedUsers([client.userID]);
             // active channel to be displayed once it is made
             setActiveChannel(newChannel);
+            
         } catch (error){
             console.log(error);
         }
