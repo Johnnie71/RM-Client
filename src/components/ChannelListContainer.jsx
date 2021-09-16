@@ -39,6 +39,8 @@ const customChannelMessagingFilter = (channels) => {
 
 const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEditing }) => {
 
+    const { client } = useChatContext();
+
     const logout = () => {
         // removing all cookies so user can sign out
         cookies.remove("token");
@@ -52,6 +54,9 @@ const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEdi
         // Reloading window which will bring to sign in/up page
         window.location.reload();
     };
+
+    // getting all channels and direct messages where our user is included!
+    const filters = { members: { $in: [client.userID]}}
 
     return (
         <>
