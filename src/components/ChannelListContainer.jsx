@@ -61,7 +61,7 @@ const ChannelListContainer = ({ isCreating, setIsCreating, setCreateType, setIsE
                 <ChannelSearch />
                 <ChannelList
                     filters={{}}
-                    channelRenderFilterFn={() => {}}
+                    channelRenderFilterFn={customChannelTeamFilter}
                     List={(listProps) => (
                         <TeamChannelList 
                             {...listProps}
@@ -83,7 +83,7 @@ const ChannelListContainer = ({ isCreating, setIsCreating, setCreateType, setIsE
                 />
                 <ChannelList
                     filters={{}}
-                    channelRenderFilterFn={() => {}}
+                    channelRenderFilterFn={customChannelMessagingFilter}
                     List={(listProps) => (
                         <TeamChannelList 
                             {...listProps}
