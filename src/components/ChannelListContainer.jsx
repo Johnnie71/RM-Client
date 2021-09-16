@@ -120,6 +120,12 @@ const ChannelListContainer = ({ setCreateType, setIsCreating, setIsEditing }) =>
                     setIsEditing={setIsEditing}
                 />
             </div>
+
+            <div className='channel-list__container-responsive'
+                style={{ left: toggelContainer ? "0%" : "-89%", backgroundColor: "#005fff" }}
+            >
+
+            </div>
         </>
     )
 };
