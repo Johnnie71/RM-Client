@@ -3,7 +3,6 @@ import { useChatContext } from 'stream-chat-react';
 
 import { UserList } from './';
 import { CloseCreateChannel } from '../assets';
-import { initialState } from 'stream-chat-react/dist/components/Channel/channelState';
 
 const ChannelNameInput = ({ channelName = '', setChannelName }) => {
 
@@ -23,7 +22,7 @@ const ChannelNameInput = ({ channelName = '', setChannelName }) => {
 }
 
 const EditChannel = ({ setIsEditing }) => {
-    const { channel } = useChatContext();
+    const { channel, client } = useChatContext();
     const [channelName, setChannelName] = useState(channel?.data?.name);
     const [selectedUsers, setSelectedUsers] = useState([]);
 
