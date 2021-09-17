@@ -27,7 +27,7 @@ const TeamChannelPreview = ({ setActiveChannel, setIsCreating, setIsEditing, set
 
     return (
         <div className={
-            channel?.id === activeChannel ?.id
+            channel?.id === activeChannel?.id
             ? 'channel-preview__wrapper__selected'
             : 'channel-preview__wrapper'
         }
