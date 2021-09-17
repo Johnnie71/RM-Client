@@ -12,7 +12,11 @@ const ChannelSearch = () => {
 
     const getChannels = async (text) => {
         try {
-            // TODO: fetch channels
+            const channelResponse = client.queryChannels({
+                type: 'team', 
+                name: { $autocomplete: text },
+                members: { $in: [client.userID]}
+            })
         } catch (error) {
             setQuery('');
         };
