@@ -35,6 +35,9 @@ const EditChannel = ({ setIsEditing }) => {
             </div>
             <ChannelNameInput channelName={channelName} setChannelName={setChannelName} />
             <UserList setSelectedUsers={setSelectedUsers}/>
+            <div className='edit-channel__button-wrapper'>
+                <p>Save Changes</p>
+            </div>
         </div>
     );
 };
