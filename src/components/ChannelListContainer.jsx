@@ -139,7 +139,7 @@ const ChannelListContainer = ({ setCreateType, setIsCreating, setIsEditing }) =>
                 />
             </div>
         </>
-    )
+    );
 };
 
 export default ChannelListContainer;
