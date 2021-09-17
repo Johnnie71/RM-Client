@@ -46,6 +46,7 @@ const UserList = ({ setSelectedUsers }) => {
     const [loading, setLoading] = useState(false);
     const [listEmpty, setListEmpty] = useState(false);
     const [error, setError] = useState(false);
+
     useEffect(() => {
         const getUsers = async () => {
             if(loading) return;
@@ -63,11 +64,11 @@ const UserList = ({ setSelectedUsers }) => {
                 if (response.users.length) {
                     setUsers(response.users);
                 } else {
-                    setError(true);
+                    setListEmpty(true);
                 }
 
             } catch (error) {
-                console.log(error)
+                setError(true);
             };
             setLoading(false)
         };
