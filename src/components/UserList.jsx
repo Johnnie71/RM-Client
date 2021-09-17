@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Avatar, useChatContext } from 'stream-chat-react';
-import { initialState } from 'stream-chat-react/dist/components/Channel/channelState';
 
 import { InviteIcon } from '../assets';
 
@@ -99,12 +98,12 @@ const UserList = ({ setSelectedUsers }) => {
     return (
         <ListContainer>
             {loading ? <div className="user-list__message">
-                    Loading users...
-                </div> : (
-                    users?.map((user, i) => (
-                        <UserItem index={i} key={user.id} user={user} setSelectedUsers={setSelectedUsers} />
-                    ))
-                )
+                          Loading users...
+                       </div> : (
+                         users?.map((user, i) => (
+                          <UserItem index={i} key={user.id} user={user} setSelectedUsers={setSelectedUsers} />
+                         ))
+                       )
             }
         </ListContainer>
     );
