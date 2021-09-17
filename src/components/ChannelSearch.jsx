@@ -53,6 +53,16 @@ const ChannelSearch = () => {
                     onChange={onSearch}
                 />
             </div>
+            {query && (
+                <ResultsDropDown
+                    teamChannels={teamChannels}
+                    directChannels={directChannels}
+                    loading={loading}
+                    setChannel={setChannel}
+                    setQuery={setQuery}
+                    setToggleContainer={setToggleContainer}
+                />
+            )}
         </div>
     );
 };
