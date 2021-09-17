@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useChatContext } from 'stream-chat-react';
 
+import { ResultsDropDown } from './';
 import SearchIcon from '../assets/SearchIcon';
 
 const ChannelSearch = ({ setToggleContainer }) => {
