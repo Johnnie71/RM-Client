@@ -1,4 +1,4 @@
-import React, { Children, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Avatar, useChatContext } from 'stream-chat-react';
 import { initialState } from 'stream-chat-react/dist/components/Channel/channelState';
 
@@ -11,7 +11,7 @@ const ListContainer = ( { children }) => {
                 <p>User</p>
                 <p>Invite</p>
             </div>
-            {Children}
+            {children}
         </div>
     );
 };
