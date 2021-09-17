@@ -39,6 +39,11 @@ const ChannelSearch = () => {
         getChannels(event.target.value)
     }
 
+    const setChannel = (channel) => {
+        setQuery('');
+        setActiveChannel(channel);
+    }
+
     return (
         <div className="channel-search__container">
             <div className="channel-search__input__wrapper">
