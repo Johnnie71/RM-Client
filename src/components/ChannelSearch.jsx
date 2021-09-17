@@ -10,6 +10,14 @@ const ChannelSearch = ({ setToggleContainer }) => {
     const [teamChannels, setTeamChannels] = useState([]);
     const [directChannels, setDirectChannels] = useState([]);
 
+    // resets every time the query changes
+    useEffect(() => {
+        if(!query){
+            setTeamChannels([]);
+            setDirectChannels([])
+        }
+    }, [query])
+
     const getChannels = async (text) => {
         try {
             const channelResponse = client.queryChannels({
