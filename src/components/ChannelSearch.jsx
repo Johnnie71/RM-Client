@@ -21,7 +21,9 @@ const ChannelSearch = () => {
             const userResponse = client.queryUsers({
                 id: { $ne: client.userID }, // excluding ourselves from the search by using our id
                 name: { $autocomplete: text },
-            })
+            });
+
+            const [channels, { users }] = await Promise.all([channelResponse, userResponse]);  //instead of waiting for response to be done to go on to the next this will trigger them both at the same time
         } catch (error) {
             setQuery('');
         };
