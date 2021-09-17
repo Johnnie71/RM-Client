@@ -16,6 +16,11 @@ const ChannelSearch = () => {
                 type: 'team', 
                 name: { $autocomplete: text },
                 members: { $in: [client.userID]}
+            });
+
+            const userResponse = client.queryUsers({
+                id: { $ne: client.userID }, // excluding ourselves from the search by using our id
+                name: { $autocomplete: text },
             })
         } catch (error) {
             setQuery('');
