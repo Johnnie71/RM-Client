@@ -56,7 +56,7 @@ const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEdi
     };
 
     // getting all channels and direct messages where our user is included!
-    const filters = { members: { $in: [client.userID]}}
+    const filters = { members: { $in: [client.userID] } };
 
     return (
         <>
