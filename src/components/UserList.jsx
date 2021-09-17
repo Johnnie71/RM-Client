@@ -30,12 +30,12 @@ const UserItem = ({ user, setSelectedUsers }) => {
     
     return (
         <div className='user-item__wrapper' onClick={handleSelect}>
-            <div className='user-item__name__wrapper'>
+            <div className='user-item__name-wrapper'>
                 <Avatar image={user.image} name={user.name || user.id} size={32} />
                 <p className='user-item__name'>{user.fullName || user.id }</p>
             </div>
              {selected ? <InviteIcon />
-             : <div className='user-item__item-empty'></div> }
+             : <div className='user-item__invite-empty'></div> }
         </div>
     )
 };
