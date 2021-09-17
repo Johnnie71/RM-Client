@@ -30,11 +30,11 @@ const CompanyHeader = () => (
 );
 
 const customChannelTeamFilter = (channels) => {
-    return channels.filter((channel) => channel .type === 'team');
+    return channels.filter((channel) => channel.type === 'team');
 };
 
 const customChannelMessagingFilter = (channels) => {
-    return channels.filter((channel) => channel .type === 'messaging');
+    return channels.filter((channel) => channel.type === 'messaging');
 };
 
 const ChannelListContent = ({ isCreating, setIsCreating, setCreateType, setIsEditing }) => {
