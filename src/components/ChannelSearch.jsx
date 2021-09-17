@@ -24,6 +24,8 @@ const ChannelSearch = () => {
             });
 
             const [channels, { users }] = await Promise.all([channelResponse, userResponse]);  //instead of waiting for response to be done to go on to the next this will trigger them both at the same time
+            if(channels.length) setTeamChannels(channels);
+            if(users.length) setDirectChannels(users);
         } catch (error) {
             setQuery('');
         };
