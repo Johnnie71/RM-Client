@@ -2,6 +2,8 @@
 
 ![Demo Gif](gif/ChatApp.gif)
 
+A responsive chat application that mimics chat services such as Slack or Microsoft Teams. Enabling users to create groups and have individual chats. With the help of Streams API not only does it help scale the application but users can reply to messages in a thread, react with emojis to messages, and send both gifs and pictures directly with ease. Also used Twilio to be able to receive text message notifications if a user is not online!
+
 ## Available Scripts
 
 In the project directory, you can run:
